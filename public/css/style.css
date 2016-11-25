@@ -1,0 +1,414 @@
+/**
+ * 顶部导航
+ */
+nav{
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+}
+nav ul{
+	height: 100%;
+	float: left;
+}
+nav ul li{
+	float: left;
+	height: 100%;
+	width: auto;
+}
+nav ul li a{
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	border-bottom: 2px solid #fff;
+}
+nav ul li a.active{
+	border-color: #09bb07;
+}
+nav ul li a:hover{
+	color: #fff;
+	background-color: #09bb07;
+	border-color: #09bb07;
+}
+nav .more{
+	display: none;
+	float: left;
+}
+._nav{
+	display: none;
+	width: 100%;
+	height: 40px;
+}
+/**
+ * 侧边栏导航
+ */
+body>aside{
+	display: none;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fafafa;
+	width: 240px;	
+	overflow: hidden;
+}
+body>aside ul{
+	width: calc(100% + 15px);
+	height: 100%;
+	overflow-y: scroll;
+}
+body>aside ul li{
+	width: 100%;
+	height: 45px;
+}
+body>aside ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	color: #000;
+	line-height: 45px;
+	text-indent: 2rem;
+}
+body>aside ul li a.active,body>aside ul li a:hover{
+	color: #fff;
+	background-color: #09aa07;
+}
+/**
+ * 内容区域
+ */
+article{
+	background: #fff;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+article .content{
+	width:100%;
+	min-height: calc(100% - 50px);
+}
+article footer{
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #efefef;
+	background-color: #fff;
+	text-align: center;
+	line-height: 50px;
+	color: #aaa;
+
+}
+article .content .sections{
+	width: 100%;
+	min-height: 100%;
+}
+.sections section{
+	width: calc(100% - 20px);
+	margin: 10px;
+	padding-bottom: 20px;
+}
+.sections section .title{
+	height: 40px;
+	width: 100%;
+}
+section>.title h2{
+	height: 100%;
+	float: left;
+	width: auto;
+}
+section>.title h2 a{
+	display: block;
+	font-size: 25px;
+	font-weight: bold;
+	color: #000;
+	line-height: 40px;
+}
+section>.title h2 a:hover{
+	color: #09bb07;
+}
+section>.toolbar{
+	width: 100%;
+	height: 50px;
+}
+section>.toolbar>span{
+	width: auto;
+	height: 100%;
+	float: left;
+	line-height: 50px;
+	font-size: 14px;
+	color: #999;
+	margin-right: 20px;
+}
+section>.toolbar>span>.icon{
+	width: auto;
+	height: 100%;
+	line-height: 50px;
+	font-size: 16px;
+	margin-right: 5px
+}
+section .acticle-content,section .article-content p{
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	text-indent: 2rem;
+}
+
+section .acticle-content pre{
+	border-radius: 5px;
+	margin: 20px 0;
+    border: none;
+    border-left: 3px solid #09bb07;
+    padding-left: 10px;
+    overflow: auto;
+    line-height: 1.5;
+    font-size: 0.96em;
+    font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #4c4c4c;
+    background-color: #272822;
+}
+
+section .acticle-content blockquote{
+	margin: 1em 0;
+    border-left: 3px solid #09bb07;
+    color: #666664;
+    padding: 5px 0;
+    background-color: #efefef
+}
+
+section .acticle-content img{
+	max-width: 100% !important;
+}
+article .content aside{
+	display: none;
+	min-height: 100%;
+}
+.aside-title {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-indent: 2rem;
+	border-left: 4px solid #09bb07;
+	border-bottom: 1px solid #efefef;
+}
+.aside-content{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	padding: 10px 0; 
+}
+.tags>h3{
+	height: 30px;
+	width: auto;
+	float: left;
+	line-height: 30px;
+	padding: 0 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+
+}
+.tags>h3>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.tags>h3>a:hover{
+	color: #09bb07;
+}
+/**
+ * 屏幕小于768px
+ */
+@media (max-width: 768px) {
+	html,body{
+    	font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+	}
+	nav{
+		display: block;
+		height: 40px;
+	}
+	nav ul{
+		width: calc(100% - 40px);	
+	}
+	nav ul li a{
+		font-size: 12px;
+		height: 38px;
+		line-height: 38px;
+	}
+
+	nav .more{
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
+	._nav{
+		display: block;
+	}
+	article{
+		width: 100%;
+		min-height: calc(100% - 40px);
+	}
+	article footer{
+		border-top: none;
+	}
+
+	.sections section .title{
+		height: 30px;
+	}
+
+	section>.title h2 a{
+		font-size: 20px;
+		line-height: 30px
+	}
+
+	section>.toolbar{
+		height: 40px;
+		overflow: hidden;
+	}
+	section>.toolbar>span{
+		width: auto;
+		height: 100%;
+		float: left;
+		line-height: 40px;
+		font-size: 10px;
+		color: #999;
+		margin-right: 10px;
+	}
+	section>.toolbar>span>.icon{
+		width: auto;
+		height: 100%;
+		line-height: 40px;
+		font-size: 12px;
+		margin-right: 5px;
+	}
+	section .acticle-content,section .article-content p{
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+/**
+ * 屏幕大于等于768px小于969px
+ */
+@media (min-width: 768px) and (max-width: 969px) {
+	html,body{
+    	font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+	}
+	nav{
+		display: block;
+		height: 45px;
+	}
+	._nav{
+		height: 45px;
+	}
+	nav ul{
+		width: 100%;	
+	}
+	nav ul li a{
+		font-size: 14px;
+		height: 43px;
+		line-height: 43px;
+	}
+	._nav{
+		display: block;
+	}
+	article{
+		width: 100%;
+		min-height: calc(100% - 40px);
+
+	}
+	.sections section .title{
+		height: 30px;
+		line-height: 30px
+	}
+	section>.title h2 a{
+		display: block;
+		font-size: 20px;
+		line-height: 30px
+	}
+
+
+	section>.toolbar{
+		height: 40px;
+	}
+	section>.toolbar>span{
+		width: auto;
+		height: 100%;
+		float: left;
+		line-height: 40px;
+		font-size: 10px;
+		color: #999;
+		margin-right: 10px;
+	}
+	section>.toolbar>span>.icon{
+		width: auto;
+		height: 100%;
+		line-height: 40px;
+		font-size: 12px;
+		margin-right: 5px
+	}
+	section .acticle-content,section .article-content p{
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+/**
+ * 屏幕大于等于970px小于1170
+ */
+@media (min-width: 970px) and (max-width: 1169px) {
+	body>aside{
+		display: block;
+	}
+	article{
+		width: calc(100% - 240px);
+		margin-left: 240px;
+	}
+	article .content{
+		float: left;
+	}
+	/*article .content .sections{
+		width: calc(100% - 240px);
+		float: left;
+	}*/
+	.sections section{
+		width: calc(100% - 40px);
+		margin: 20px;
+	}
+	footer{
+		float: left;
+	}
+}
+/**
+ * 屏幕大于1170px
+ */
+@media (min-width: 1170px) {
+	body>aside{
+		display: block;
+	}
+	article{
+		width: calc(100% - 240px);
+		margin-left: 240px;
+	}
+	article .content{
+		float: left;
+	}
+	article .content .sections{
+		width: calc(100% - 320px);
+		float: left;
+	}
+	.sections section{
+		width: calc(100% - 40px);
+		margin: 20px;
+	}
+	article .content aside{
+		display: block;
+		width: 320px;
+		float: left;
+	}
+	footer{
+		float: left;
+	}
+}
