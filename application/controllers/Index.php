@@ -27,16 +27,9 @@ class IndexController extends Yaf_Controller_Abstract {
 	public function testMongoAction()
 	{
 		
+		$model = new ArticleModel();
 		echo '<pre>';
-		var_dump( MongoDemoModel::demo() );
-		
-		return false;
-	}
-	public function testMysqlAction()
-	{
-		echo '<pre>';
-		var_dump(MysqlDemoModel::demo() );
-		
+		var_dump( $model->allData() );
 		
 		return false;
 	}

@@ -118,8 +118,13 @@ class Manager
     public function addConnection(array $config, $name = 'default')
     {
         $connections = $this->container['config']['database.connections'];
-
-        $connections[$name] = $config;
+		
+	    if(isset($config['driver'])) {
+		    $connections[$name] = $config;
+	    } else {
+	    	$connections    =   $config;
+		    $connections[$name] = $config['mysql'];
+	    }
 
         $this->container['config']['database.connections'] = $connections;
     }

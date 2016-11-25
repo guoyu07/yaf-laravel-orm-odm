@@ -28,11 +28,20 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Loader::import("vendor/autoload.php");
 		$capsule = new \Illuminate\Database\Capsule\Manager();
 		
+//		echo '<pre>';
+//		var_dump( $this->_config->orm->eloquent->toArray());
+//		exit;
+		
+		
+		$capsule->getDatabaseManager()->setDefaultConnection(
+			$this->_config->orm->db->default
+		);
 		$capsule->addConnection(
 			$this->_config->orm->eloquent->toArray());
 		
-		$capsule->getDatabaseManager()->extend( 'mongodb' , function($config){
-			return \Jenssegers\Mongodb\Connection($config);
+		$capsule->getDatabaseManager()->extend('mongodb', function($config)
+		{
+			return new Jenssegers\Mongodb\Connection($config);
 		});
 		
 		$capsule->bootEloquent();
