@@ -9,5 +9,8 @@
 	use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 	class MongoDb extends Eloquent
 	{
-		
+		public function __construct ( )
+		{
+			parent::__construct ( );
+		}
 	}

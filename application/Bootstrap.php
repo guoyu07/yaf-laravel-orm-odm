@@ -41,8 +41,9 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		
 		$capsule->getDatabaseManager()->extend('mongodb', function($config)
 		{
-			return new Jenssegers\Mongodb\Connection($config);
+			return new \Jenssegers\Mongodb\Connection($config);
 		});
+		
 		
 		$capsule->bootEloquent();
 		

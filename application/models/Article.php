@@ -8,14 +8,16 @@
 	 */
 	class ArticleModel extends MongoDB
 	{
-		public function __construct()
-		{
-			parent::__construct();
-		}
+		protected   $table      = 'article';
+		//protected   $primaryKey = 'id';
 		
 		
 		public function allData()
 		{
+			
+			
+			//return DB::connection( 'article')->insert( ['id'=>,'name' =>'Peter','age'=>25]);
+			//return $this->save(['name' =>'Peter','age'=>25]);
 			return $this->getConnection();
 		}
 		

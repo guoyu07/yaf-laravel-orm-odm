@@ -12,4 +12,9 @@
 	{
 		use HybridRelations;
 		protected $connection = 'mysql';
+		
+		public function __construct ( )
+		{
+			parent::__construct ( );
+		}
 	}

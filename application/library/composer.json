@@ -1,5 +1,6 @@
 {
     "require": {
-        "jenssegers/mongodb": "^3.1"
+        "jenssegers/mongodb": "^3.1",
+        "illuminate/queue": "^5.3"
     }
 }

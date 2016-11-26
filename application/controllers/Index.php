@@ -26,7 +26,6 @@ class IndexController extends Yaf_Controller_Abstract {
 	}
 	public function testMongoAction()
 	{
-		
 		$model = new ArticleModel();
 		echo '<pre>';
 		var_dump( $model->allData() );
